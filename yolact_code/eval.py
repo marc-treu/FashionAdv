@@ -8,7 +8,7 @@ from yolact_code.utils.functions import SavePath
 from yolact_code.layers.output_utils import postprocess, undo_image_transformation
 import pycocotools
 
-from data import cfg, set_cfg, set_dataset
+from yolact_code.data import cfg, set_cfg, set_dataset
 
 import numpy as np
 import torch

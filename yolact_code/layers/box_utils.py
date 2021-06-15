@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import torch
 
-from data import cfg
+from yolact_code.data import cfg
 
 @torch.jit.script
 def point_form(boxes):
