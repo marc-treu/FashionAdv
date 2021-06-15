@@ -48,7 +48,7 @@ TV = TotalVariation()
 
 set_cfg("yolact_base_config")
 
-dataset = COCODetection('/home/smg/v-marc/data/val2017/', '/home/smg/v-marc/data/annotations/instances_val2017.json',
+dataset = COCODetection('/content/val2017/', '/content/annotations/instances_val2017.json',
                         transform=NoneTransform(), has_gt=True)
 
 prep_coco_cats()
