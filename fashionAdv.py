@@ -48,14 +48,14 @@ TV = TotalVariation()
 
 set_cfg("yolact_base_config")
 
-dataset = COCODetection('/content/val2017/', '/content/annotations/instances_val2017.json',
+dataset = COCODetection('/content/yolact/data/coco/val2017/', '/content/yolact/data/coco/annotations/instances_val2017.json',
                         transform=NoneTransform(), has_gt=True)
 
 prep_coco_cats()
 
 yolact = Yolact()
 yolact.to(device)
-yolact.load_weights("/home/smg/v-marc/code/yolact_code/weights/yolact_base_54_800000.pth")
+yolact.load_weights("/content/yolact/weights/yolact_base_54_800000.pth")
 yolact.eval()
 
 for param in yolact.parameters():
