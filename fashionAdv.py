@@ -78,7 +78,7 @@ criterion = MultiBoxLoss(num_classes=cfg.num_classes, pos_threshold=cfg.positive
 
 conv_id_coco_dset = {dataset.ids[i]: i for i in range(len(dataset))}
 
-file_id = open('/home/smg/v-marc/code/Instance_Segmentation_Attack/data/image_id_list.pkl', 'rb')
+file_id = open('/content/FashionAdv/Instance_Segmentation_Attack/data/image_id_list.pkl', 'rb')
 imgs_to_attack_cocoid = pickle.load(file_id)
 file_id.close()
 
