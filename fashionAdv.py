@@ -177,7 +177,7 @@ def fashionAdv_attack(content_index_image, setup):
     masks_image = postprocess(y_hat, 550, 550, crop_masks=True, score_threshold=0)[3][ind].squeeze(1).to(device)
 
     # Open the mask for the attack, genereting from the human parsing
-    image_mask = Image.open(f'/home/smg/v-marc/data/mask_upper_shirt/mask_{dataset.ids[content_index_image]:012d}.png')
+    image_mask = Image.open(f'/content/FashionAdv/Instance_Segmentation_Attack/data/mask_upper_shirt/mask_{dataset.ids[content_index_image]:012d}.png')
     content_mask = transforms.ToTensor()(image_mask).to(device)
 
     # Create the patch
@@ -188,7 +188,7 @@ def fashionAdv_attack(content_index_image, setup):
     optimizer = optim.Adam([patch], lr=setup['lr'], amsgrad=True)
 
     # Open the style image
-    im = Image.open(f'/home/smg/v-marc/data/fashion_pattern/{setup["Texture_style"]:0>2d}.jpg')
+    im = Image.open(f'/content/FashionAdv/Instance_Segmentation_Attack/data/fashion_pattern/{setup["Texture_style"]:0>2d}.jpg')
     style_image = transforms.ToTensor()(im)
     style_image = normalize(style_image).cuda()
 
@@ -237,7 +237,7 @@ if __name__ == '__main__':
         'weights': None
     }
 
-    file_min_cost = open('/home/smg/v-marc/data/minimal_texture_cost.pkl', 'rb')
+    file_min_cost = open('/content/FashionAdv/minimal_texture_cost.pkl', 'rb')
     print('For each attack we take the style image which produce the minimal texture loss.')
     print(file_min_cost)
     minimal_texture_cost_list = pickle.load(file_min_cost)
