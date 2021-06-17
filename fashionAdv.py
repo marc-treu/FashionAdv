@@ -17,11 +17,11 @@ from Instance_Segmentation_Attack.textural_loss import *
 from Instance_Segmentation_Attack.jpeg_compression import jpeg_approximation
 from Instance_Segmentation_Attack.image_manipulation import apply_gaussian_filter, adjust_hue
 
-sys.path.append('yolact_code')
+sys.path.append('yolact')
 
-from yolact_code.eval import *
-from yolact_code.data import *
-from yolact_code.layers.modules import MultiBoxLoss
+from yolact.eval import *
+from yolact.data import *
+from yolact.layers.modules import MultiBoxLoss
 
 
 device = torch.device("cuda")
