@@ -18,6 +18,14 @@
 
   ![](FashionAdv.jpg)
 
+## 📄 Paper
+
+**[Fashion-Guided Adversarial Attack on Person Segmentation](https://openaccess.thecvf.com/content/CVPR2021W/WMF/papers/Treu_Fashion-Guided_Adversarial_Attack_on_Person_Segmentation_CVPRW_2021_paper.pdf)**  
+*CVPR 2021 Workshop*
+
+This paper presents the first adversarial example-based method for attacking human instance segmentation networks. Our approach automatically identifies attackable regions and generates natural-looking adversarial textures that can make persons invisible to segmentation networks while maintaining high image quality.
+
+
 ## ✨ Key Features
 
 - 🎨 **Fashion-Guided**: Leverages fashion style images to generate natural-looking adversarial textures
@@ -25,6 +33,7 @@
 - 🛡️ **Robust**: Resistant to JPEG compression, image filtering, and various transformations
 - 👁️ **Imperceptible**: Changes are inconspicuous to human observers
 - 🚀 **SOTA Performance**: Significantly outperforms conventional adversarial methods
+
 
 ## 📊 Performance Highlights
 
